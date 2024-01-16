@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $("#currentDay").text(dayjs().format("dddd, MMMM D"));
 
-    for (let hour = 9; hour <= 17; hour++) {
+    for (let hour = 9; hour <= 23; hour++) {
       let timeblock = $("<div>").addClass("row time-block");
       let hourDiv = $("<div>").addClass("col-md-1 hour").text(dayjs().hour(hour).format("hA"));
       let eventInput = $("<textarea>").addClass("col-md-10 description");
@@ -14,7 +14,7 @@ $(document).ready(function () {
         localStorage.setItem(`event-${hour}`, eventText);
       });
   
-      // timeblock elements
+      // timeblock
       timeblock.append(hourDiv, eventInput, saveBtn);
   
       $(".container").append(timeblock);
