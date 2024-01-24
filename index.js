@@ -24,9 +24,11 @@ $(document).ready(function () {
         eventInput.val(savedEvent);
       }
   
-      if (hour < dayjs().hour()) {
+      let currentHour = dayjs().set('hour', hour);
+
+      if (currentHour.isBefore(dayjs(), 'hour')) {
         timeblock.addClass("past");
-      } else if (hour === dayjs().hour()) {
+      } else if (currentHour.isSame(dayjs(), 'hour')) {
         timeblock.addClass("present");
       } else {
         timeblock.addClass("future");
