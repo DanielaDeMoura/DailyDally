@@ -44,3 +44,6 @@ To run DailyDally on your machine, follow these steps:
 - **Intuitive Interface:** The clear colour-coded timeblocks helps users identify past, present, and future events easily.
 
 
+![screenshot of the application on desktop view](imgReadme/deskDay.png)
+
+![screenshot of the application on mobile view](imgReadme/mobileDay.png)
